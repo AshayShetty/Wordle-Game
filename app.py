@@ -18,12 +18,12 @@ def evaluate_guess(guess, word):
 
     for i in range(5):
         if guess[i] == word[i]:
-            str += "\033[32m" + guess[i] # makes the matching letter green
+            str += "\033[32m" + guess[i] + " " # makes the matching letter green
         else:
             if guess[i] in word:
-                str += "\033[33m" + guess[i] # makes the correct letter nut wrong position yellow
+                str += "\033[33m" + guess[i] + " "# makes the correct letter nut wrong position yellow
             else:
-                str += "\033[0m" + guess[i] # default
+                str += "\033[0m" + guess[i] + " " # default
     
     return str + "\033[0m"
 
